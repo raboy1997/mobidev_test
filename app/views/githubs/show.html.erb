@@ -1,0 +1,15 @@
+
+<% @contributors.each do |cont|%>
+    <%= link_to cont[:login], user_path([cont.login])  %><br>
+<% end %>
+
+
+<%=  @repo[:full_name]  %><br>
+description: <%=   @repo[:description]  %><br>
+watchers:<%=  @repo[:watchers]  %><br>
+forks:<%=  @repo[:forks]  %><br>
+open issues: <%=  @repo[:open_issues] %><br>
+homepage: <%=  @repo[:homepage]  %><br>
+GitHub repo:<%=  @repo[:html_url]  %><br>
+created at: <%=  @repo[:created_at] %><br>
+

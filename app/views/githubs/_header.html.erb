@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">MobiDev GitHub Browser</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+    <div class="col-sm-3 col-md-3">
+      <%= form_tag search_path, method: :get, :class => 'navbar-form' do %>
+          <div class="input-group">
+            <%= text_field_tag "repositories", nil , placeholder: 'search repositories', :class => "form-control" %>
+            <div class="input-group-btn">
+              <%= submit_tag "Seacrh", :class => "btn btn-default" %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+
+  </div>
+</nav>

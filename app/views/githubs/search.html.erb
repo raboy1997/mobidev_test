@@ -1,0 +1,35 @@
+
+
+<div class="search_title">for search term "<%=params[:repositories]%>" found</div>
+<% @repositories.each do  |repo| %>
+    <div class="search_project">
+      <ul class="hr">
+        <li><%= link_to repo[:name] , repository_path(repo[:id])%></li>
+        <li><%=link_to repo[:owner][:login], user_path(repo[:owner][:login]) %></li>
+        <li><a href="<%= repo[:homepage]%>"><%= repo[:homepage]%></a></li>
+      </ul>
+      <h4><%=truncate(repo[:description], :length => 40)  %></h4>
+      <ul class="hr">
+        <li>forks: <%= repo[:forks]%></li>
+
+        <li>watchers: <%= repo[:watchers]%></li>
+
+        <% if  is_favorite_repo(repo[:id])  %>
+            <%= link_to  unfollow_repo_path(repo[:id]) do %>
+                <li>
+                  <%= image_tag('Facebook_like_thumb.png',  :class => 'like') %>
+                  <i class="fa fa-pencil-square-o"> like </i>
+                </li>
+            <% end %>
+        <% else %>
+            <%= link_to follow_repo_path(repo[:id]) do %>
+                <li>
+                  <%= image_tag('Not_facebook_dislike_thumbs_down.png',  :class => 'like') %>
+                  <i class="fa fa-pencil-square-o">unlike</i>
+                </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </div>
+<%end%>
+

@@ -1,0 +1,171 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#service{background-color: ghostwhite;padding-top: 100px;padding-bottom: 100px;}
+.row-1 .ser-col-4{border-right:solid 1px #ccc;border-bottom: solid 1px #ccc;}
+.row-1 .ser-col-4-l{border-bottom: solid 1px #ccc;}
+.row-2 .ser-col-4{border-right:solid 1px #ccc;border-bottom: solid 1px #ccc;}
+.row-2 .ser-col-4-l{border-bottom: solid 1px #ccc;}
+.row-3 .ser-col-4{border-right:solid 1px #ccc;}
+
+
+@media (max-width:768px){
+  .ser-col-4-l{border-right:solid 1px #ccc;border-bottom: solid 1px #ccc;border-left:solid 1px #ccc;}
+  .ser-col-4{border-left:solid 1px #ccc;border-bottom: solid 1px #ccc;}
+}
+
+.ser-col{width:100%;height:auto;text-align: center;padding:20px;position: relative;}
+.icon-col{width:80px;height:80px;border-radius: 50%;text-align: center;margin-left: auto;margin-right: auto;}
+.icon-col i{font-size: 35px;padding: 20px;}
+.circle {
+  position: absolute;
+  bottom: -11px;
+  right: -24px;
+  z-index: 99;
+}
+.circle i{color:#ccc;font-size: 18px;background-color:ghostwhite;}
+.btns {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  color: red;
+  background-image: none;
+  border: 1px solid red;
+  border-radius: 0px;
+}
+.ser-col h2{color:#777;
+  margin-bottom: 20px;}
+
+.ser-col p{color:#3e3b3b;
+  margin-bottom: 20px;}
+
+/*====== service 1 ====*/
+.ser-1 .icon-col{border: solid 1px red;}
+.ser-1 .icon-col i{color:red;}
+.ser-1 .btn{color:red;border: 1px solid red;}
+
+
+/// user
+
+.profile-block{
+  margin:30px auto;
+  position:relative;
+  overflow:hidden;
+  max-width: 300px;
+}
+.profile-block .user-heading {
+  background: #c5251e none repeat scroll 0 0;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.profile-block .user-heading a img {
+  border-radius: 50%;
+  margin:auto auto 10px;
+  display: block;
+  height: 140px;
+  width: 140px;
+  border: 10px solid rgba(255, 255, 255, 0.3);
+}
+.profile-block .user-heading h1 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.profile-block .user-heading p {
+  color: #fff;
+  font-size: 12px;
+  margin-bottom: 0;
+  text-align: center;
+}
+.profile-block ul{
+  padding:0;
+  margin:0;
+}
+.profile-block ul > li {
+  border-bottom: 1px solid #ddd;
+  line-height: 30px;
+  margin-top: 0;
+}
+.profile-block .nav > li > a {
+  background: #e7e7e7;
+  border-radius: 0;
+  color: #000;
+  display: block;
+  font-size: 14px;
+  padding: 6px 18px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+}
+.profile-block ul > li > a > i {
+  color: #000;
+  font-size: 16px;
+  padding-right: 10px;
+}
+.profile-block ul > li > a:hover,
+.profile-block ul > li > a:focus,
+.profile-block ul li.active a {
+  background: #fff !important;
+  border-radius: 0;
+  color: #000 !important;
+}
+
+.like{
+  width: 20px;
+  height: 20px;
+}
+
+/// search
+.search_project{
+  height: 200px;
+  width: 700px;
+  background: #f0f0f0;
+  border: 1px solid black;
+  padding: 15px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul.hr {
+  margin: 0;
+  padding: 4px;
+}
+ul.hr li {
+  display: inline;
+  margin-right: 65px;
+  padding: 3px;
+  font-size: 20px;
+}
+
+.search_title{
+  margin: auto;
+  width: 165px;
+}
