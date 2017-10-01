@@ -169,3 +169,34 @@ ul.hr li {
   margin: auto;
   width: 165px;
 }
+
+/// show_project
+.contributors{
+  float: right;
+  margin-right: 50%;
+}
+
+.show_project{
+  width: 100%;
+  margin: auto;
+}
+
+.info_project{
+  width: 30%;
+  border-right: 2px solid #ccc;
+  margin-left: 5%;
+}
+
+.wrap ol {
+  list-style-position: inside;
+  -moz-column-count: 2; /* Firefox */
+  -webkit-column-count: 2; /* Safari and Chrome */
+  column-count: 1;
+  list-style-type: decimal;
+  height: 200px;
+  width: 200px ;
+}
+
+.wrap a {
+  margin-left: 3%;
+}

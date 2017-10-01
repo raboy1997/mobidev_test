@@ -23,14 +23,14 @@ class GithubsController < ApplicationController
     follow = Favorite.user.find_or_initialize_by(gid: params[:login])
     follow.save
 
-    redirect_to user_path(params[:login])
+    redirect_to :back
   end
 
   def unfollow_user
     follow = Favorite.user.find_by(gid: params[:login])
     follow.destroy if follow.present?
 
-    redirect_to user_path(params[:login])
+    redirect_to :back
   end
 
   def follow_repo

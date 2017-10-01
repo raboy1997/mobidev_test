@@ -16,6 +16,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 
 group :development, :test do
   gem 'byebug'
+  gem 'rubocop', '~> 0.50.0', require: false
 end
 
 group :development do

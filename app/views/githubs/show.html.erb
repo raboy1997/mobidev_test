@@ -1,15 +1,38 @@
+<div class="show_project">
+  <div class="contributors">
+    <div class="wrap">
+      <ol>
+        <% @contributors.each do |cont|%>
 
-<% @contributors.each do |cont|%>
-    <%= link_to cont[:login], user_path([cont.login])  %><br>
-<% end %>
+            <li>
+              <%= link_to cont[:login], user_path([cont.login])  %>
+
+              <% if  is_favorite_user(cont[:login])  %>
+                  <%= link_to  unfollow_user_path(cont[:login]) do %>
+                      <%= image_tag('Facebook_like_thumb.png',  :class => 'like') %>
+                  <% end %>
+              <% else %>
+                  <%= link_to follow_user_path(cont[:login]) do %>
+                      <%= image_tag('Not_facebook_dislike_thumbs_down.png',  :class => 'like') %>
+                  <% end %>
+              <% end %>
+            </li>
+        <% end %>
+
+      </ol>
+    </div>
+  </div>
 
 
-<%=  @repo[:full_name]  %><br>
-description: <%=   @repo[:description]  %><br>
-watchers:<%=  @repo[:watchers]  %><br>
-forks:<%=  @repo[:forks]  %><br>
-open issues: <%=  @repo[:open_issues] %><br>
-homepage: <%=  @repo[:homepage]  %><br>
-GitHub repo:<%=  @repo[:html_url]  %><br>
-created at: <%=  @repo[:created_at] %><br>
+  <div class="info_project">
+    <h4><%=  @repo[:full_name]  %><br></h4>
+    <h4>description: <%=   @repo[:description]  %><br></h4>
+    <h4>watchers: <%=  @repo[:watchers]  %><br></h4>
+    <h4>forks: <%=  @repo[:forks]  %><br></h4>
+    <h4>open issues: <%=  @repo[:open_issues] %><br></h4>
+    <h4>homepage: <%=  @repo[:homepage]  %><br></h4>
+    <h4>GitHub repo: <%=  @repo[:html_url]  %><br></h4>
+    <h4>created at: <%=  @repo[:created_at] %><br></h4>
+  </div>
 
+</div>
